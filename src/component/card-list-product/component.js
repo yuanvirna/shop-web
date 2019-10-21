@@ -1,10 +1,9 @@
 import React from 'react';
 import { CardMedia, CardContent, Typography, Link } from '@material-ui/core';
-import Products from '../../data-dummy/product-database';
+
 class component extends React.Component {
   render() {
-    // const { classes } = this.props;
-    const { classes, cart } = this.props;
+    const { classes } = this.props;
 
     return (
       <React.Fragment>

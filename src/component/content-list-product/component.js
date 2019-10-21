@@ -1,6 +1,6 @@
 import React from 'react';
 import CardListProduct from '../card-list-product';
-import { Grid, Card, ListItem } from '@material-ui/core';
+import { Card, ListItem } from '@material-ui/core';
 import ButtonCounter from '../card-counter';
 
 class App extends React.Component {
