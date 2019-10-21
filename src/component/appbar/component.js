@@ -19,6 +19,8 @@ import Typography from '@material-ui/core/Typography';
 import { List, ListItem } from '@material-ui/core';
 import AccountCircleSharpIcon from '@material-ui/icons/AccountCircleSharp';
 import ShoppingCartSharpIcon from '@material-ui/icons/ShoppingCartSharp';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -53,19 +55,6 @@ class App extends Component {
                 <List className={classes.rootList}>
                   <ListItem>
                     <Button
-                      variant="contained"
-                      className={classes.rootListItem}
-                    >
-                      <ListItemIcon>
-                        Login
-                        <AccountCircleSharpIcon
-                          className={classes.ListItemIcon}
-                        />
-                      </ListItemIcon>
-                    </Button>
-                  </ListItem>
-                  <ListItem>
-                    <Button
                       href="/list"
                       variant="contained"
                       className={classes.rootListItem}
@@ -80,6 +69,19 @@ class App extends Component {
                   </ListItem>
                   <ListItem>
                     <Button
+                      href="/"
+                      variant="contained"
+                      className={classes.rootListItem}
+                    >
+                      <ListItemIcon>
+                        Back to Home
+                        <HomeRoundedIcon className={classes.ListItemIcon} />
+                      </ListItemIcon>
+                    </Button>
+                  </ListItem>
+                  <ListItem>
+                    <Button
+                      href="/login"
                       variant="contained"
                       className={classes.rootListItem}
                     >
