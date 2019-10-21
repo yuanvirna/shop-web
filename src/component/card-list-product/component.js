@@ -1,22 +1,25 @@
 import React from 'react';
-import { Grid, Card, List, CardMedia } from '@material-ui/core';
-import ButtonCounter from '../card-counter';
+import { CardMedia, CardContent, Typography, Link } from '@material-ui/core';
+import Products from '../../data-dummy/product-database';
 class component extends React.Component {
   render() {
-    const { classes } = this.props;
+    // const { classes } = this.props;
+    const { classes, cart } = this.props;
 
     return (
       <React.Fragment>
-        <CardMedia
-          style={{
-            // maxWidth: '30px',
-            // maxHeight: '20px',
-            width: 95,
-            height: 80,
-            borderRadius: 4
-          }}
-          image="https://ecs7.tokopedia.net/img/cache/700/product-1/2018/5/7/6767494/6767494_ae6901af-d2dd-4a7c-be17-e4e80d8d538a_827_573.jpg"
-        ></CardMedia>
+        <Link href="/detail-product">
+          <CardMedia
+            alt="sayur kol"
+            className={classes.CardMedia}
+            image="https://ecs7.tokopedia.net/img/cache/700/product-1/2018/5/7/6767494/6767494_ae6901af-d2dd-4a7c-be17-e4e80d8d538a_827_573.jpg"
+          ></CardMedia>
+        </Link>
+        <CardContent className={classes.CardContent}>
+          <Typography>
+            <p /> Rp 15.000/kg
+          </Typography>
+        </CardContent>
       </React.Fragment>
     );
   }
