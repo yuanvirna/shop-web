@@ -2,45 +2,35 @@ const Style = {
   AppBarTitle: {
     margin: 'auto',
     fontSize: 26,
-    // fontFamily: 'calibri',
     display: 'flex',
     justifyContent: 'center'
-    // marginRight: 10,
-    // color: 'white'
-    // backgroundColor: 'red',
   },
   HamburgerMenu: {
     margin: 'auto',
-    // fontSize: 26,
+
     fontFamily: 'aria',
-    marginRight: 90,
+
     backgroundColor: 'red'
   },
   root: {
     margin: 'auto',
-    fontSize: 26,
     color: 'black',
     fontFamily: 'arial',
-    // width: 150,
     marginTop: 20
-    // backgroundColor: 'red'
-    // maxWidth: 448
   },
 
   rootList: {
-    // backgroundColor: 'blue',
     margin: 'auto',
     marginTop: 180
-    // maxWidth: 448
   },
-  rootListItem: {
+  Button: {
     justifyContent: 'center',
     margin: 'auto',
-    fontSize: 23,
     fontFamily: 'arial',
-    fontWeight: 'normal'
-    // backgroundColor: 'red'
-    // maxWidth: 448
+    fontWeight: 'normal',
+    backgroundColor: 'black',
+    height: 40,
+    width: '100%'
   },
   AppBar: {
     backgroundColor: 'red',
@@ -48,7 +38,16 @@ const Style = {
     position: 'static'
   },
   ListItemIcon: {
-    fontSize: 40
+    // fontSize: 40,
+    color: 'white',
+    justifyContent: 'center'
+    // display: 'flex'
+  },
+  Typography: {
+    color: 'white',
+    justifyContent: 'center',
+    margin: 'auto'
+    // marginLeft: 20
   }
 };
 export default Style;

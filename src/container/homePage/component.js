@@ -1,10 +1,9 @@
 import React from 'react';
 import AppBar from '../../component/appbar';
 import Content from '../../component/content-homePage';
-import { Grid, Box, Container } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 class component extends React.Component {
   render() {
-    const { classes } = this.props;
     return (
       <React.Fragment>
         <Container

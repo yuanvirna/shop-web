@@ -1,21 +1,9 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import CheeseburgerMenu from 'cheeseburger-menu';
 import HamburgerMenu from 'react-hamburger-menu';
-// import MenuContent from './menuContent';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import {
-  Button,
-  Card,
-  Grid,
-  ListItemIcon,
-  Container,
-  Box
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import Typography from '@material-ui/core/Typography';
+import { Button, Grid, ListItemIcon, Typography } from '@material-ui/core';
 import { List, ListItem } from '@material-ui/core';
 import AccountCircleSharpIcon from '@material-ui/icons/AccountCircleSharp';
 import ShoppingCartSharpIcon from '@material-ui/icons/ShoppingCartSharp';
@@ -47,7 +35,7 @@ class App extends Component {
           <List className={classes.root}>
             <div>
               <CheeseburgerMenu
-                backgroundColor="#ff5722"
+                backgroundColor="#f44336"
                 className={classes.HamburgerMenu}
                 isOpen={this.state.menuOpen}
                 closeCallback={this.closeMenu.bind(this)}
@@ -57,10 +45,12 @@ class App extends Component {
                     <Button
                       href="/list"
                       variant="contained"
-                      className={classes.rootListItem}
+                      className={classes.Button}
                     >
-                      <ListItemIcon>
+                      <Typography className={classes.Typography}>
                         List Product
+                      </Typography>
+                      <ListItemIcon>
                         <ShoppingCartSharpIcon
                           className={classes.ListItemIcon}
                         />
@@ -71,10 +61,12 @@ class App extends Component {
                     <Button
                       href="/"
                       variant="contained"
-                      className={classes.rootListItem}
+                      className={classes.Button}
                     >
-                      <ListItemIcon>
+                      <Typography className={classes.Typography}>
                         Back to Home
+                      </Typography>
+                      <ListItemIcon>
                         <HomeRoundedIcon className={classes.ListItemIcon} />
                       </ListItemIcon>
                     </Button>
@@ -83,10 +75,12 @@ class App extends Component {
                     <Button
                       href="/login"
                       variant="contained"
-                      className={classes.rootListItem}
+                      className={classes.Button}
                     >
-                      <ListItemIcon>
+                      <Typography className={classes.Typography}>
                         Login
+                      </Typography>
+                      <ListItemIcon>
                         <AccountCircleSharpIcon
                           className={classes.ListItemIcon}
                         />
