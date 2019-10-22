@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import { Typography } from '@material-ui/core';
 
 class component extends React.Component {
   constructor() {
@@ -32,7 +33,7 @@ class component extends React.Component {
           -
         </Button>
 
-        <h2 style={{ marginLeft: 10, marginRight: 10 }}> {Hitung}</h2>
+        <Typography className={classes.TypographyCounter}>{Hitung}</Typography>
 
         <Button
           variant="contained"
