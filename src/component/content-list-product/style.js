@@ -8,8 +8,8 @@ const Style = {
     //   margin: 'auto',
     marginTop: 12,
     display: 'flex',
-    justifyContent: 'center',
-    backgroundColor: '#bf27a6'
+    justifyContent: 'center'
+    // backgroundColor: '#bf27a6'
   },
   ListCard: {
     marginLeft: 12,

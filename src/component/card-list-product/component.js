@@ -17,7 +17,7 @@ class component extends React.Component {
         <CardContent className={classes.CardContent}>
           <Typography>{item.name}</Typography>
           <Typography>
-            <p /> Rp {item.price}
+            <p /> {item.price}
           </Typography>
         </CardContent>
       </React.Fragment>

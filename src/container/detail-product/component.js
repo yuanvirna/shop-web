@@ -2,7 +2,8 @@ import React from 'react';
 import Appbar from '../../component/appbar';
 import { Container } from '@material-ui/core';
 import DetailProduct from '../../component/detail-product';
-import Product from '../../data-dummy/product-database';
+import ProductData from '../../data-dummy/product-database';
+
 class component extends React.Component {
   render() {
     return (
@@ -14,8 +15,8 @@ class component extends React.Component {
         }}
       >
         <Appbar />
-        {Product.map(detail => {
-          return <DetailProduct detail={detail} />;
+        {ProductData.map(item => {
+          return <DetailProduct item={item} />;
         })}
       </Container>
     );
