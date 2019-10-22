@@ -35,7 +35,7 @@ const Style = {
   AppBar: {
     backgroundColor: 'red',
     maxWidth: 448,
-    position: 'static'
+    position: 'sticky'
   },
   ListItemIcon: {
     // fontSize: 40,

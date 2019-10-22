@@ -3,7 +3,7 @@ import { CardMedia, CardContent, Typography, Link } from '@material-ui/core';
 
 class component extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, item } = this.props;
 
     return (
       <React.Fragment>
@@ -11,12 +11,13 @@ class component extends React.Component {
           <CardMedia
             alt="sayur kol"
             className={classes.CardMedia}
-            image="https://ecs7.tokopedia.net/img/cache/700/product-1/2018/5/7/6767494/6767494_ae6901af-d2dd-4a7c-be17-e4e80d8d538a_827_573.jpg"
+            image={item.image}
           ></CardMedia>
         </Link>
         <CardContent className={classes.CardContent}>
+          <Typography>{item.name}</Typography>
           <Typography>
-            <p /> Rp 15.000/kg
+            <p /> Rp {item.price}
           </Typography>
         </CardContent>
       </React.Fragment>

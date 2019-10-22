@@ -1,6 +1,6 @@
 const style = {
   root: {
-    marginTop: '100px',
+    marginTop: 40,
     display: 'flex',
     justifyContent: 'center',
     margin: 'auto',
