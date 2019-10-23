@@ -85,6 +85,7 @@ class Component extends React.Component {
                       <LockIcon />
                     </InputAdornment>
                   }
+                  className={classes.input}
                 />
               </ListItem>
               <ListItem>
@@ -95,6 +96,7 @@ class Component extends React.Component {
               </ListItem>
               <ListItem>
                 <Button
+                  variant="contained"
                   color="primary"
                   aria-label="outlined primary button group"
                   onClick={this.handleLogin}
