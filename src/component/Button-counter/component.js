@@ -15,9 +15,9 @@ class component extends React.Component {
     });
   };
   pengurangan = () => {
-    this.setState({
-      Hitung: this.state.Hitung - 1
-    });
+    this.setState(prevState => ({
+      Hitung: prevState.Hitung ? prevState.Hitung - 1 : 0
+    }));
   };
   render() {
     const { classes } = this.props;
