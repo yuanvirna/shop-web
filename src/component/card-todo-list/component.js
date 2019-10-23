@@ -1,5 +1,5 @@
 import React from 'react';
-import todos from '../../container/homePage/data';
+import todos from '../../container/TodoList/data';
 import { Card, List, Button } from '@material-ui/core';
 import EditRoundedIcon from '@material-ui/icons/EditRounded';
 import ClearRoundedIcon from '@material-ui/icons/ClearRounded';

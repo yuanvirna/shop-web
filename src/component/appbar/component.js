@@ -8,6 +8,7 @@ import { List, ListItem } from '@material-ui/core';
 import AccountCircleSharpIcon from '@material-ui/icons/AccountCircleSharp';
 import ShoppingCartSharpIcon from '@material-ui/icons/ShoppingCartSharp';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import PlaylistAddCheckIcon from '@material-ui/icons/PlaylistAddCheck';
 
 class App extends Component {
   constructor(props) {
@@ -82,6 +83,22 @@ class App extends Component {
                       </Typography>
                       <ListItemIcon>
                         <AccountCircleSharpIcon
+                          className={classes.ListItemIcon}
+                        />
+                      </ListItemIcon>
+                    </Button>
+                  </ListItem>
+                  <ListItem>
+                    <Button
+                      href="/todolist"
+                      variant="contained"
+                      className={classes.Button}
+                    >
+                      <Typography className={classes.Typography}>
+                        TodoList
+                      </Typography>
+                      <ListItemIcon>
+                        <PlaylistAddCheckIcon
                           className={classes.ListItemIcon}
                         />
                       </ListItemIcon>

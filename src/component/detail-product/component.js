@@ -1,12 +1,9 @@
 import React from 'react';
 import {
   Card,
-  ListItem,
   CardMedia,
   Grid,
   Typography,
-  Button,
-  ButtonGroup,
   Container
 } from '@material-ui/core';
 import ButtonCounter from '../Button-counter';
