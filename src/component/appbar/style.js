@@ -21,7 +21,7 @@ const Style = {
 
   rootList: {
     margin: 'auto',
-    marginTop: 180
+    marginTop: 130
   },
   Button: {
     justifyContent: 'center',
