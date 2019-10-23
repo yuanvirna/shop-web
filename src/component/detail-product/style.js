@@ -16,10 +16,9 @@ const Style = {
   },
   CardMedia: {
     width: 200,
-    // height: 100,
-    // borderRadius: 4,
+
     height: 265,
-    margin: '1em',
+
     borderRadius: 5,
     margin: 'auto'
   },
@@ -47,15 +46,13 @@ const Style = {
     marginTop: 22
   },
   description: {
-    color: '#4E5356',
     fontFamily: 'Montserrat, sans-serif',
     fontSize: '0.975rem',
     margin: 'auto',
     marginLeft: '1em',
-    margin: 'auto',
+
     alignItems: 'center',
-    color: 'black',
-    fontFamily: 'serif'
+    color: 'black'
   },
   gridContentDescription: {
     display: 'flex',
