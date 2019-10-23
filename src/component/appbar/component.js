@@ -66,26 +66,43 @@ class App extends Component {
               >
                 <List className={classes.rootList}>
                   {this.state.isLogin === true ? (
-                    <ListItem>
-                      <Button
-                        href="/"
-                        variant="contained"
-                        className={classes.Button}
-                      >
-                        {AdminData.map(data => {
-                          return (
-                            <Typography className={classes.Typography}>
-                              {data.account.username}
-                            </Typography>
-                          );
-                        })}
-                        <ListItemIcon>
-                          <AccountCircleRoundedIcon
-                            className={classes.ListItemIcon}
-                          />
-                        </ListItemIcon>
-                      </Button>
-                    </ListItem>
+                    <div>
+                      <ListItem>
+                        <Button
+                          href="/"
+                          variant="contained"
+                          className={classes.Button}
+                        >
+                          {AdminData.map(data => {
+                            return (
+                              <Typography className={classes.Typography}>
+                                {data.account.username}
+                              </Typography>
+                            );
+                          })}
+                          <ListItemIcon>
+                            <AccountCircleRoundedIcon
+                              className={classes.ListItemIcon}
+                            />
+                          </ListItemIcon>
+                        </Button>
+                      </ListItem>
+                      <ListItem>
+                        <Button
+                          onClick={this.handlelogout}
+                          href="/"
+                          variant="contained"
+                          className={classes.Button}
+                        >
+                          <Typography className={classes.Typography}>
+                            LOGOUT
+                          </Typography>
+                          <ListItemIcon>
+                            <ExitToAppIcon className={classes.ListItemIcon} />
+                          </ListItemIcon>
+                        </Button>
+                      </ListItem>
+                    </div>
                   ) : (
                     <ListItem>
                       <Button
@@ -148,22 +165,6 @@ class App extends Component {
                         <PlaylistAddCheckIcon
                           className={classes.ListItemIcon}
                         />
-                      </ListItemIcon>
-                    </Button>
-                  </ListItem>
-
-                  <ListItem>
-                    <Button
-                      onClick={this.handlelogout}
-                      href="/"
-                      variant="contained"
-                      className={classes.Button}
-                    >
-                      <Typography className={classes.Typography}>
-                        LOGOUT
-                      </Typography>
-                      <ListItemIcon>
-                        <ExitToAppIcon className={classes.ListItemIcon} />
                       </ListItemIcon>
                     </Button>
                   </ListItem>
