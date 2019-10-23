@@ -9,7 +9,9 @@ import AccountCircleSharpIcon from '@material-ui/icons/AccountCircleSharp';
 import ShoppingCartSharpIcon from '@material-ui/icons/ShoppingCartSharp';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import PlaylistAddCheckIcon from '@material-ui/icons/PlaylistAddCheck';
-
+import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import AdminData from '../../data-dummy/admin-database';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +28,28 @@ class App extends Component {
   closeMenu() {
     this.setState({ menuOpen: false });
   }
-
+  state = {
+    isLoading: true,
+    isLogin: false
+  };
+  componentDidMount() {
+    const checkStatusFromStorage = localStorage.getItem('sudah login');
+    if (checkStatusFromStorage === null) {
+      this.setState({
+        isLogin: false
+      });
+    } else {
+      this.setState({
+        isLogin: true
+      });
+    }
+  }
+  handlelogout() {
+    localStorage.removeItem('sudah login');
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 500);
+  }
   render() {
     const { classes } = this.props;
 
@@ -42,22 +65,45 @@ class App extends Component {
                 closeCallback={this.closeMenu.bind(this)}
               >
                 <List className={classes.rootList}>
-                  <ListItem>
-                    <Button
-                      href="/list"
-                      variant="contained"
-                      className={classes.Button}
-                    >
-                      <Typography className={classes.Typography}>
-                        List Product
-                      </Typography>
-                      <ListItemIcon>
-                        <ShoppingCartSharpIcon
-                          className={classes.ListItemIcon}
-                        />
-                      </ListItemIcon>
-                    </Button>
-                  </ListItem>
+                  {this.state.isLogin === true ? (
+                    <ListItem>
+                      <Button
+                        href="/"
+                        variant="contained"
+                        className={classes.Button}
+                      >
+                        {AdminData.map(data => {
+                          return (
+                            <Typography className={classes.Typography}>
+                              {data.account.username}
+                            </Typography>
+                          );
+                        })}
+                        <ListItemIcon>
+                          <AccountCircleRoundedIcon
+                            className={classes.ListItemIcon}
+                          />
+                        </ListItemIcon>
+                      </Button>
+                    </ListItem>
+                  ) : (
+                    <ListItem>
+                      <Button
+                        href="/login"
+                        variant="contained"
+                        className={classes.Button}
+                      >
+                        <Typography className={classes.Typography}>
+                          Login
+                        </Typography>
+                        <ListItemIcon>
+                          <AccountCircleSharpIcon
+                            className={classes.ListItemIcon}
+                          />
+                        </ListItemIcon>
+                      </Button>
+                    </ListItem>
+                  )}
                   <ListItem>
                     <Button
                       href="/"
@@ -74,20 +120,21 @@ class App extends Component {
                   </ListItem>
                   <ListItem>
                     <Button
-                      href="/login"
+                      href="/list"
                       variant="contained"
                       className={classes.Button}
                     >
                       <Typography className={classes.Typography}>
-                        Login
+                        List Product
                       </Typography>
                       <ListItemIcon>
-                        <AccountCircleSharpIcon
+                        <ShoppingCartSharpIcon
                           className={classes.ListItemIcon}
                         />
                       </ListItemIcon>
                     </Button>
                   </ListItem>
+
                   <ListItem>
                     <Button
                       href="/todolist"
@@ -101,6 +148,22 @@ class App extends Component {
                         <PlaylistAddCheckIcon
                           className={classes.ListItemIcon}
                         />
+                      </ListItemIcon>
+                    </Button>
+                  </ListItem>
+
+                  <ListItem>
+                    <Button
+                      onClick={this.handlelogout}
+                      href="/"
+                      variant="contained"
+                      className={classes.Button}
+                    >
+                      <Typography className={classes.Typography}>
+                        LOGOUT
+                      </Typography>
+                      <ListItemIcon>
+                        <ExitToAppIcon className={classes.ListItemIcon} />
                       </ListItemIcon>
                     </Button>
                   </ListItem>
