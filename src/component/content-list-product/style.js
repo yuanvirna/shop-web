@@ -16,6 +16,14 @@ const Style = {
     marginTop: 12,
     maxWidth: 448,
     position: 'static'
+  },
+  CardMedia: {
+    width: 95,
+    height: 80,
+    borderRadius: 4
+  },
+  CardContent: {
+    width: 35
   }
 };
 export default Style;

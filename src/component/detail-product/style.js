@@ -34,16 +34,32 @@ const Style = {
     fontSize: '0.975rem',
     margin: 'auto',
     marginLeft: '1em',
-    margin: 'auto'
+    fontWeight: 'bold'
   },
   unit: {
     color: '#C7C7C9',
     fontSize: '0.875rem',
     fontWeight: 'bold'
   },
-  ButtonCounter: {
+  GridButtonCounter: {
     display: 'flex',
-    margin: 'auto'
+    margin: 'auto',
+    marginTop: 22
+  },
+  description: {
+    color: '#4E5356',
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '0.975rem',
+    margin: 'auto',
+    marginLeft: '1em',
+    margin: 'auto',
+    alignItems: 'center',
+    color: 'black',
+    fontFamily: 'serif'
+  },
+  gridContentDescription: {
+    display: 'flex',
+    justifyContent: 'center'
   }
 };
 export default Style;
