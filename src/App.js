@@ -5,7 +5,7 @@ import CartListProduct from './container/cart-list-product';
 import Login from './container/login';
 import DetailProduct from './component/detail-product';
 import HomePage from './container/HomePage';
-
+import Youtube from './container/Youtube';
 class App extends React.Component {
   state = {
     isLoading: true,
@@ -33,6 +33,7 @@ class App extends React.Component {
             <Route path="/list" exact component={CartListProduct} />
             <Route path="/list/:id" exact component={DetailProduct} />
             <Route path="/login" exact component={Login} />
+            <Route path="/youtube" exact component={Youtube} />
           </Switch>
         ) : (
           <Switch>
@@ -41,6 +42,7 @@ class App extends React.Component {
             <Route path="/list" exact component={CartListProduct} />
             <Route path="/list/:id" exact component={DetailProduct} />
             <Route path="/login" exact component={Login} />
+            <Route path="/youtube" exact component={Youtube} />
           </Switch>
         )}
       </div>
