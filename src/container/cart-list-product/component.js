@@ -1,7 +1,8 @@
 import React from 'react';
 import AppBar from '../../component/appbar';
 import Content from '../../component/content-list-product';
-import { Container } from '@material-ui/core';
+import { Container, Grid } from '@material-ui/core';
+import BottomSheet from '../../component/card-total-product';
 class component extends React.Component {
   render() {
     return (
@@ -16,6 +17,9 @@ class component extends React.Component {
           <AppBar />
 
           <Content />
+          {/* <Grid container spacing={0}>
+            <BottomSheet />
+          </Grid> */}
         </Container>
       </React.Fragment>
     );
