@@ -1,13 +1,20 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { Typography } from '@material-ui/core';
-
+import Products from '../../data-dummy/product-database';
 class component extends React.Component {
   constructor() {
     super();
     this.state = {
       Hitung: 0
     };
+  }
+  componentDidMount() {
+    const data = Products.find(isi => isi.price);
+    const dataProduct = data.price;
+    this.setState({
+      Hitung: dataProduct
+    });
   }
   penambahan = () => {
     this.setState({
